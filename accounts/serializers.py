@@ -11,7 +11,6 @@ class StyleSerializer(serializers.ModelSerializer):
 
 
 class AccountSerializer(serializers.ModelSerializer):
-    # styles = StyleSerializer(many=True)
     password = serializers.CharField(write_only=True)
     class Meta:
         model = User
@@ -24,6 +23,11 @@ class AccountSerializer(serializers.ModelSerializer):
         instance = self.Meta.model.objects.create_user(**validated_data)
         instance.styles.add(*styles)
         return instance
+
+    def to_representation(self, instance):
+        ret = super().to_representation(instance)
+        ret["styles"] = StyleSerializer(instance.styles.all(), many=True).data
+        return ret
 
 
 
