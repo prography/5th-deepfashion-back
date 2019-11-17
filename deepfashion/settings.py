@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'accounts',
+    'clothes',
     'rest_framework.authtoken',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
 }
+
+
+MEDIA_URL = '/clothing/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
