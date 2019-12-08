@@ -25,11 +25,10 @@ with open('secret.txt') as file:
     secret = file.read()
 SECRET_KEY = secret
 
-print(SECRET_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
