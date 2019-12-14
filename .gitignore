@@ -8,6 +8,8 @@ media/
 # secret key
 secret.txt
 Dockerfile
+credentials.csv
+
 
 # Editor
 .vscode/
