@@ -8,14 +8,13 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-eb-virt/
 
 
 # Pyre type checker
 .pyre/
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.cofig.yml
 !.elasticbeanstalk/*.global.yml
 
 # Byte-compiled / optimized / DLL files

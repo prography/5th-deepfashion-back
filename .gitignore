@@ -9,7 +9,7 @@ media/
 secret.txt
 Dockerfile
 credentials.csv
-
+.ssh/
 
 # Editor
 .vscode/
