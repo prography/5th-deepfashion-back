@@ -82,12 +82,17 @@ WSGI_APPLICATION = 'deepfashion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+DB_PWD = ''
+with open('rdssecret.txt') as file:
+    db_pwd = file.read()
+DB_PWD = db_pwd
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "deepfashion",
         "USER": "deepfashion",
-        "PASSWORD": "deepfashion",
+        "PASSWORD": DB_PWD,
         "HOST": "deep-fashion.cviablub5osu.ap-northeast-2.rds.amazonaws.com",
         "PORT": '5432',
     }

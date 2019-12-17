@@ -9,6 +9,7 @@ media/
 secret.txt
 Dockerfile
 credentials.csv
+dbsecret.txt
 .ssh/
 
 # Editor
