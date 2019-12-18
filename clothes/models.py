@@ -15,7 +15,6 @@ class SeasonType(models.Model):
 
 class ColorType(models.Model):
     name = models.TextField()
-
     def __str__(self):
         return self.name
 
