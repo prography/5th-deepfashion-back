@@ -13,6 +13,11 @@ class SeasonType(models.Model):
         return self.name
 
 
+class ColorType(models.Model):
+    name = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 # jean, jogger, padding types
 class CategoryType(models.Model):
@@ -28,16 +33,19 @@ class PartType(models.Model):
         return self.name
 
 
-
 class Clothing(models.Model):
-    style = models.ForeignKey('accounts.Style', on_delete=models.SET_NULL, null=True)
+    style = models.ForeignKey(
+        'accounts.Style', on_delete=models.SET_NULL, null=True)
     name = models.TextField()
-    color = models.TextField()
-    owner = models.ForeignKey(User, related_name='clothings', on_delete=models.CASCADE)
-    season = models.ForeignKey(SeasonType, on_delete=models.SET_NULL, null=True)
+    owner = models.ForeignKey(
+        User, related_name='clothings', on_delete=models.CASCADE)
+    color = models.ForeignKey(ColorType, on_delete=models.SET_NULL, null=True)
+    season = models.ForeignKey(
+        SeasonType, on_delete=models.SET_NULL, null=True)
     part = models.ForeignKey(PartType, on_delete=models.SET_NULL, null=True)
-    category = models.ForeignKey(CategoryType, on_delete=models.SET_NULL, null=True)
-    
+    category = models.ForeignKey(
+        CategoryType, on_delete=models.SET_NULL, null=True)
+
     def __str__(self):
         return self.name
 
