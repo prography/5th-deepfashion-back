@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import PostImage, Clothing, PostImage
+from .models import PostImage, Clothing, PostImage, CodiList
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -7,6 +7,11 @@ class ImageSerializer(serializers.ModelSerializer):
         model = PostImage
         fields = "__all__"
 
+
+class CodiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CodiList
+        fields = ["name", "owner", "clothes"]
 
 class ClothingSerializer(serializers.ModelSerializer):
     # image = serializers.ImageField(use_url=True)

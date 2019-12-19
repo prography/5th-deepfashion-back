@@ -10,6 +10,7 @@ urlpatterns = [
     path('upload/', views.ImageUploadView.as_view()),
     path('admin/', views.AdminClothingList.as_view()),
     path('<int:pk>/', views.ClothingDetail.as_view()),
+    path('codilist/', views.UserCodiList.as_view()),
     path('', views.UserClothingList.as_view()),
 ]
 

@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
-# user 들의 옷 모델
-
 
 # summer, all, spring/fall, winter types
 class SeasonType(models.Model):
@@ -49,7 +47,6 @@ class Clothing(models.Model):
         return self.name
 
 
-
 class PostImage(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     clothing = models.ForeignKey(Clothing, related_name='images', on_delete=models.CASCADE, null=True)
@@ -57,3 +54,14 @@ class PostImage(models.Model):
 
     def __str__(self):
         return str(self.owner) + "'s " + self.clothing.name
+
+
+class CodiList(models.Model):
+    name = models.TextField()
+    clothes = models.ManyToManyField(Clothing)
+    created_at = models.DateTimeField(auto_now=True)
+    owner = models.ForeignKey(
+        User, related_name='codis', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
