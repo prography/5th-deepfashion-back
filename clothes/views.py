@@ -6,7 +6,12 @@ from rest_framework import status, viewsets, permissions, generics, permissions
 from .serializers import ImageSerializer, ClothingSerializer, CodiSerializer
 from .models import Clothing, CodiList
 from .permissions import is_owner
+from django.http import HttpResponse
 
+
+def index(request):
+    msg = "deepfashion"
+    return HttpResponse(msg, content_type='text/plain')
 
 
 class ImageUploadView(APIView):
