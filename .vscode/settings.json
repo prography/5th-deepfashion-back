@@ -5,5 +5,5 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.pythonPath": "C:\\Users\\dongj\\Anaconda3\\envs\\drf\\python.exe"
+    "python.pythonPath": "eb-virt\\Scripts\\python.exe"
 }
