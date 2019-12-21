@@ -49,8 +49,8 @@ for e in entries:
     
 print(data)
 valid_columns = [1, 5, 7, 8, 9, 10, 11]
-cleaned_data = [data[idx].text if data[dx].text !='\xa0' else None for idx in valid_columns]
-    
+cleaned_data = [data[idx].text if data[idx].text !='\xa0' else None for idx in valid_columns]
+print(cleaned_data)    
     
     
     
