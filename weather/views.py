@@ -8,14 +8,15 @@ import datetime
 
 
 # function to scrape current weather data if 1 hours has passed since last update_time 
-def initial_scrape(delay=1):
+def current_initial_scrape(delay=1):
     # 한국 표준시간
     KST = datetime.timezone(datetime.timedelta(hours=9))
     # check whether scrapped in the last 12 hours
     sample_city = CurrentWeather.objects.get(id=1)
     curr_time = datetime.datetime.now(tz=KST)
     delta = datetime.timedelta(hours=delay)
-    if curr_time - sample_city.update_time > delta:
+    # just return without updating if less than 1 hour has passed since last update
+    if curr_time - sample_city.update_time < delta:
         return
 
     # scraping and update part
@@ -38,19 +39,19 @@ def initial_scrape(delay=1):
             id=city_idx+1, location=city_data[0].text)
         cleaned_data = [city_data[idx].text if city_data[idx].text !=
                         '\xa0' else None for idx in valid_columns]
-        print(cleaned_data, 'cleaned_data')
         curr_city.status, curr_city.temp, curr_city.windchill, curr_city.rain, curr_city.snow, curr_city.humidity, curr_city.wind_direction = cleaned_data
         curr_city.save()
 
 
 
-class CurrentWeatherView(generics.ListAPIView):
-    initial_scrape()
 
+
+class CurrentWeatherView(generics.ListAPIView):
     queryset = CurrentWeather.objects.all()
     serializer_class = CurrentWeatherSerializer
 
     def list(self, request):
+        current_initial_scrape()
         # Note the use of `get_queryset()` instead of `self.queryset`
         queryset = self.get_queryset()
         serializer = CurrentWeatherSerializer(queryset, many=True)

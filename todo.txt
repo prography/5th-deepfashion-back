@@ -1,2 +1,14 @@
 
 just add image field to clothing, delete post image model -> do necessary work surrouning the model
+
+
+
+delete user
+edit user details
+short term weather tmax, tmin and other things
+http://www.weather.go.kr/weather/forecast/summary.jsp
+(the above link contains current temp, and tmax, tmin for the day,
+organized into reasonable number of regions)
+clothing recommendation - get clothing by certain quality
+
+
