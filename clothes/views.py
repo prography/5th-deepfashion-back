@@ -45,7 +45,7 @@ class ClothingDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 # get list of all codis for a user
-class UserCodiList(generics.ListCreateAPIView):
+class CodiListList(generics.ListCreateAPIView):
     serializer_class = CodiSerializer
     queryset = CodiList.objects.all()
     permission_classes = [is_owner]
@@ -57,6 +57,13 @@ class UserCodiList(generics.ListCreateAPIView):
         """
         user = self.request.user
         return CodiList.objects.filter(owner=user)
+
+
+class CodiListDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = CodiSerializer
+    queryset = CodiList.objects.all()
+    permission_classes = [is_owner]
+
 
 
 

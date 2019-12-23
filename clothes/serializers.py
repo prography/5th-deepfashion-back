@@ -13,6 +13,12 @@ class CodiSerializer(serializers.ModelSerializer):
         model = CodiList
         fields = ["name", "owner", "clothes"]
 
+
+    def to_representation(self, instance):
+        ret = super().to_representation(instance)
+        ret["pk"] = instance.pk
+        return ret
+
 class ClothingSerializer(serializers.ModelSerializer):
     # image = serializers.ImageField(use_url=True)
     class Meta:
@@ -29,7 +35,6 @@ class ClothingSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         ret = super().to_representation(instance)
-        print(ret)
         ret["images"] = ImageSerializer(instance.images.all(), many=True).data
         ret["clothing"] = instance.pk
         return ret
