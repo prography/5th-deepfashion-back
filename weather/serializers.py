@@ -19,4 +19,7 @@ class CurrentWeatherSerializer(serializers.ModelSerializer):
 
 
 class ShortPredictionWeatherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CurrentWeather
+        fields = "__all__"
     pass
