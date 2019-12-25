@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from rest_framework import status, viewsets, permissions, generics, permissions
 from .serializers import ImageSerializer, ClothingSerializer, CodiSerializer
 from .models import Clothing, CodiList
+from rest_framework import status
 from .permissions import is_owner
 from django.http import HttpResponse
 
@@ -49,6 +50,15 @@ class CodiListList(generics.ListCreateAPIView):
     serializer_class = CodiSerializer
     queryset = CodiList.objects.all()
     permission_classes = [is_owner]
+
+    def post(self, request, *args, **kwargs):
+        # test for clothing ownership
+        for clothing in request.data['clothes']:
+            if Clothing.objects.get(id=clothing).owner != request.user:
+                return Response(status=status.HTTP_401_UNAUTHORIZED)
+        return self.create(request, *args, **kwargs)
+
+
 
     def get_queryset(self):
         """

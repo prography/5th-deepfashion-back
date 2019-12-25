@@ -11,13 +11,9 @@ class ImageSerializer(serializers.ModelSerializer):
 class CodiSerializer(serializers.ModelSerializer):
     class Meta:
         model = CodiList
-        fields = ["name", "owner", "clothes"]
+        fields = "__all__"
 
 
-    def to_representation(self, instance):
-        ret = super().to_representation(instance)
-        ret["pk"] = instance.pk
-        return ret
 
 class ClothingSerializer(serializers.ModelSerializer):
     # image = serializers.ImageField(use_url=True)

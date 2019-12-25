@@ -59,9 +59,10 @@ class PostImage(models.Model):
 class CodiList(models.Model):
     name = models.TextField()
     clothes = models.ManyToManyField(Clothing)
-    created_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     owner = models.ForeignKey(
         User, related_name='codis', on_delete=models.CASCADE)
+    update_time = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
