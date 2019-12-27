@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'weather',
     'rest_framework.authtoken',
     'drf_yasg',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -154,3 +155,12 @@ REST_FRAMEWORK = {
 
 MEDIA_URL = '/clothing/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# AWS Access
+AWS_ACCESS_KEY_ID = 'AKIAJOP4E4KWP3XYGMEA'
+AWS_SECRET_ACCESS_KEY = '************'
+AWS_STORAGE_BUCKET_NAME = 'che1-s3-practice'

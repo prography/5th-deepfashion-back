@@ -1,9 +1,6 @@
 # Docker
 dev_run.sh
 
-# Media
-media/
-
 
 # secret key
 secret.txt
@@ -144,7 +141,8 @@ dmypy.json
 .pyre/
 
 
-
+#vs code stuff
+.vscode/
 
 
 
