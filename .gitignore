@@ -8,7 +8,9 @@ Dockerfile
 credentials.csv
 dbsecret.txt
 rdssecret.txt
+aws.txt
 .ssh/
+settings.ini
 
 # Editor
 .vscode/

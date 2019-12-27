@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import decouple
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,15 +21,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-secret = ''
-with open('secret.txt') as file:
-    secret = file.read()
-SECRET_KEY = secret
+# secret = ''
+# with open('secret.txt') as file:
+#     secret = file.read()
+
+SECRET_KEY = decouple.config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = decouple.config('DEBUG')
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [decouple.config("ALLOWED_HOSTS"), 'localhost']
 
 
 # Application definition
@@ -84,17 +86,17 @@ WSGI_APPLICATION = 'deepfashion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DB_PWD = ''
-with open('rdssecret.txt') as file:
-    db_pwd = file.read()
-DB_PWD = db_pwd
+# DB_PWD = ''
+# with open('rdssecret.txt') as file:
+#     db_pwd = file.read()
+# DB_PWD = db_pwd
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': "deepfashion",
         "USER": "deepfashion",
-        "PASSWORD": DB_PWD,
+        "PASSWORD": decouple.config('DB_PWD'),
         "HOST": "deep-fashion.cviablub5osu.ap-northeast-2.rds.amazonaws.com",
         "PORT": '5432',
     }
@@ -161,6 +163,7 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # AWS Access
-AWS_ACCESS_KEY_ID = 'AKIAJOP4E4KWP3XYGMEA'
-AWS_SECRET_ACCESS_KEY = '************'
-AWS_STORAGE_BUCKET_NAME = 'che1-s3-practice'
+AWS_ACCESS_KEY_ID = decouple.config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = decouple.config('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = decouple.config('AWS_STORAGE_BUCKET_NAME')
+AWS_LOCATION = 'static'
