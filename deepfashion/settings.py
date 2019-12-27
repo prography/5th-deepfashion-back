@@ -30,7 +30,9 @@ SECRET_KEY = decouple.config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = decouple.config('DEBUG')
 
-ALLOWED_HOSTS = [decouple.config("ALLOWED_HOSTS"), 'localhost']
+# ALLOWED_HOSTS = [decouple.config("ALLOWED_HOSTS"), 'localhost']
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
@@ -85,11 +87,6 @@ WSGI_APPLICATION = 'deepfashion.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# DB_PWD = ''
-# with open('rdssecret.txt') as file:
-#     db_pwd = file.read()
-# DB_PWD = db_pwd
 
 DATABASES = {
     'default': {
