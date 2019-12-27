@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'weather',
     'rest_framework.authtoken',
     'drf_yasg',
-    'storages',
+    # 'storages',
 ]
 
 MIDDLEWARE = [
@@ -160,8 +160,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # AWS Access
 AWS_ACCESS_KEY_ID = decouple.config('AWS_ACCESS_KEY_ID')
