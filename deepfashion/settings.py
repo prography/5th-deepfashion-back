@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'weather',
     'rest_framework.authtoken',
     'drf_yasg',
-    # 'storages',
+    'storages',
 ]
 
 MIDDLEWARE = [
