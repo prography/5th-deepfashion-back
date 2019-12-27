@@ -10,6 +10,7 @@ secret.txt
 Dockerfile
 credentials.csv
 dbsecret.txt
+rdssecret.txt
 .ssh/
 
 # Editor
