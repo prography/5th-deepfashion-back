@@ -22,11 +22,12 @@ class AccountViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = AccountSerializer
     
-    def get_queryset(self):
-        if self.request.user.is_superuser:
-            return CustomUser.objects.all()
-        else:
-            return CustomUser.objects.filter(id=self.request.user.id)
+    # def get_queryset(self):
+    #     if self.request.user.is_superuser:
+    #         return CustomUser.objects.all()
+    #     else:
+
+    #         return CustomUser.objects.filter(id=self.request.user.id)
 
 
 class Logout(APIView):
