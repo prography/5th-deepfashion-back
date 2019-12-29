@@ -19,7 +19,6 @@ class AccountViewSet(viewsets.ModelViewSet):
     """
     This viewset automatically provides `list` and `detail` actions.
     """
-
     queryset = CustomUser.objects.all()
     serializer_class = AccountSerializer
     
