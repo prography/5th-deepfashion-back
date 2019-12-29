@@ -3,12 +3,13 @@ from rest_framework.parsers import FileUploadParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status, viewsets, permissions, generics, permissions
-from .serializers import ImageSerializer, ClothingSerializer, CodiSerializer
+from .serializers import ImageSerializer, ClothingSerializer, CodiSerializer, MyFileSerializer
 from .models import Clothing, CodiList
 from rest_framework import status
 from .permissions import is_owner
 from django.http import HttpResponse
-
+from rest_framework import viewsets, status
+from rest_framework.parsers import MultiPartParser, FormParser
 
 def index(request):
     msg = "deepfashion"
@@ -27,8 +28,9 @@ class ImageUploadView(APIView):
             return Response(image_serializer.data, status=status.HTTP_201_CREATED)
         else:
             print("error, image_serializer is not valid", image_serializer)
+            print("request user id", request.user,
+                  "clothing owner", request.data["clothing"])
             return Response(image_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 
 # only for admin, testin purposes
@@ -38,7 +40,47 @@ class AdminClothingList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAdminUser]
 
 
+class MyFileView(APIView):
+		# MultiPartParser AND FormParser
+		# https://www.django-rest-framework.org/api-guide/parsers/#multipartparser
+		# "You will typically want to use both FormParser and MultiPartParser
+		# together in order to fully support HTML form data."
+		parser_classes = (MultiPartParser, FormParser)
+
+		def post(self, request, *args, **kwargs):
+				file_serializer = MyFileSerializer(data=request.data)
+				if file_serializer.is_valid():
+						file_serializer.save()
+						return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+				else:
+						return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class Test(viewsets.ModelViewSet):
+    queryset = Clothing.objects.all()
+    serializer_class = ClothingSerializer
+
+
+# get the list of all clothes a specific user has
+class UserClothingList(generics.ListCreateAPIView):
+    serializer_class = ClothingSerializer
+    queryset = Clothing.objects.all()
+    permission_classes = [is_owner]
+
+    def get_queryset(self):
+        """
+        This view should return a list of all the clothes
+        for the currently authenticated user.
+        """
+        user = self.request.user
+        return Clothing.objects.filter(owner=user)
+
+    def perform_create(self, serializer):
+        return super().perform_create(serializer)
+
 # get individual clothing, only works for owners
+
+
 class ClothingDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Clothing.objects.all()
     serializer_class = ClothingSerializer
@@ -58,8 +100,6 @@ class CodiListList(generics.ListCreateAPIView):
                 return Response(status=status.HTTP_401_UNAUTHORIZED)
         return self.create(request, *args, **kwargs)
 
-
-
     def get_queryset(self):
         """
         This view should return a list of all the codis
@@ -73,21 +113,3 @@ class CodiListDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CodiSerializer
     queryset = CodiList.objects.all()
     permission_classes = [is_owner]
-
-
-
-
-# get the list of all clothes a specific user has
-class UserClothingList(generics.ListCreateAPIView):
-    serializer_class = ClothingSerializer
-    queryset = Clothing.objects.all()
-    permission_classes = [is_owner]
-
-    def get_queryset(self):
-        """
-        This view should return a list of all the clothes
-        for the currently authenticated user.
-        """
-        user = self.request.user
-        return Clothing.objects.filter(owner=user)
-

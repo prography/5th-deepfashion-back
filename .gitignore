@@ -78,6 +78,12 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+
+
+#debug stuff
+debug.txt
+
+
 # Flask stuff:
 instance/
 .webassets-cache
@@ -122,7 +128,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-eb-virt/
 
 # Spyder project settings
 .spyderproject

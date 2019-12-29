@@ -42,10 +42,13 @@ class Clothing(models.Model):
     part = models.ForeignKey(PartType, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(
         CategoryType, on_delete=models.SET_NULL, null=True)
+    img = models.ImageField(default='default.jpg')
 
     def __str__(self):
         return self.name
 
+class FileModel(models.Model):
+    file = models.FileField(default="default.jpg")
 
 class PostImage(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
