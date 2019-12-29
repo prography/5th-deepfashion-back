@@ -29,6 +29,9 @@ class PartType(models.Model):
     def __str__(self):
         return self.name
 
+#file model for debugging
+class FileModel(models.Model):
+    file = models.FileField()
 
 class Clothing(models.Model):
     style = models.ForeignKey(
