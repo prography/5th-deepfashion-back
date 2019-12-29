@@ -47,8 +47,7 @@ class Clothing(models.Model):
     def __str__(self):
         return self.name
 
-class FileModel(models.Model):
-    file = models.FileField(default="default.jpg")
+
 
 class PostImage(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)

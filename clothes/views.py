@@ -40,26 +40,6 @@ class AdminClothingList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAdminUser]
 
 
-class MyFileView(APIView):
-		# MultiPartParser AND FormParser
-		# https://www.django-rest-framework.org/api-guide/parsers/#multipartparser
-		# "You will typically want to use both FormParser and MultiPartParser
-		# together in order to fully support HTML form data."
-		parser_classes = (MultiPartParser, FormParser)
-
-		def post(self, request, *args, **kwargs):
-				file_serializer = MyFileSerializer(data=request.data)
-				if file_serializer.is_valid():
-						file_serializer.save()
-						return Response(file_serializer.data, status=status.HTTP_201_CREATED)
-				else:
-						return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class Test(viewsets.ModelViewSet):
-    queryset = Clothing.objects.all()
-    serializer_class = ClothingSerializer
-
 
 # get the list of all clothes a specific user has
 class UserClothingList(generics.ListCreateAPIView):
