@@ -6,8 +6,6 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from clothes import views
 
 
-router = SimpleRouter()
-router.register(r'', views.Test)
 
 urlpatterns = [
     path('upload/', views.ImageUploadView.as_view()),
@@ -17,7 +15,6 @@ urlpatterns = [
     path('codilist/<int:pk>/', views.CodiListDetail.as_view()),
 ]
 
-urlpatterns += router.urls
 
 
 
