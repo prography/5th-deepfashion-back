@@ -60,4 +60,3 @@ urllib3==1.24.3
 wcwidth==0.1.7
 wincertstore==0.2
 wrapt==1.10.11
-awscli==1.16.303
