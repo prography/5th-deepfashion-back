@@ -13,9 +13,8 @@ urlpatterns = [
     path('<int:pk>/', views.ClothingDetail.as_view()),
     path('codilist/', views.CodiListList.as_view()),
     path('codilist/<int:pk>/', views.CodiListDetail.as_view()),
+    path('', views.UserClothingList.as_view()),
 ]
-
-
 
 
 if settings.DEBUG:

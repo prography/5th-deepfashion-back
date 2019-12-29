@@ -42,7 +42,7 @@ class Clothing(models.Model):
     part = models.ForeignKey(PartType, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(
         CategoryType, on_delete=models.SET_NULL, null=True)
-    img = models.ImageField(default='default.jpg')
+    img = models.ImageField(default='deepfashion12291159default.png')
 
     def __str__(self):
         return self.name
