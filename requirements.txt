@@ -12,8 +12,8 @@ colorama==0.3.9
 coreapi==2.3.3
 coreschema==0.0.4
 Django==2.2.6
-django-extensions==2.2.3
-django-storages==1.7
+django-extensions==2.2.5
+django-storages==1.8
 djangorestframework==3.10.3
 docutils==0.15.2
 drf-yasg==1.17.0
@@ -61,3 +61,5 @@ urllib3==1.24.3
 wcwidth==0.1.7
 wincertstore==0.2
 wrapt==1.10.11
+soupsieve==1.9.5
+wheel==0.33.6
