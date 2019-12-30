@@ -1,7 +1,6 @@
 
-just add image field to clothing, delete post image model -> do necessary work surrouning the model
 
-
+delete post image model?
 
 short term weather tmax, tmin and other things
 http://www.weather.go.kr/weather/forecast/summary.jsp
@@ -10,4 +9,9 @@ organized into reasonable number of regions)
 clothing recommendation - get clothing by certain quality
 
 
-the codilist accepts pk of clothing object not owned by "owner"
+- check for ownership for when deleting, updating, getting list of users
+- automatically set "owner" filed for when uploading clothing from token, instead of accepting owner as a field
+- restrict image access to only users who own the clothing
+
+
+* email for registration and password recovery
