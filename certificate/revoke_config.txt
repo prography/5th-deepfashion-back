@@ -1,0 +1,7 @@
+{
+  "CrlConfiguration": 
+    {"Enabled": true,
+     "ExpirationInDays": 7,
+     "CustomCname": "some_name.crl",
+     "S3BucketName": "elasticbeanstalk-us-west-2-448978579577"}
+}

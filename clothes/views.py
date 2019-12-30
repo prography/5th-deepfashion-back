@@ -52,8 +52,11 @@ class UserClothingList(generics.ListCreateAPIView):
         This view should return a list of all the clothes
         for the currently authenticated user.
         """
-        print("user is :", self.request.user)
-        return Clothing.objects.filter(owner=self.request.user)
+        # print("user is :", self.request.user)
+        # user = self.request.user
+        user = self.request.data["owner"]
+        print(user, "new user")
+        return Clothing.objects.filter(owner=user)
 
     def perform_create(self, serializer):
         return super().perform_create(serializer)
