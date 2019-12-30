@@ -12,6 +12,7 @@ clothing recommendation - get clothing by certain quality
 - check for ownership for when deleting, updating, getting list of users
 - automatically set "owner" filed for when uploading clothing from token, instead of accepting owner as a field
 - restrict image access to only users who own the clothing
+- restict get clothing access to owners (get owner not from owner field, but from token)
 
 
 * email for registration and password recovery

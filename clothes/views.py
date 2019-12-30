@@ -45,7 +45,7 @@ class AdminClothingList(generics.ListCreateAPIView):
 class UserClothingList(generics.ListCreateAPIView):
     serializer_class = ClothingSerializer
     queryset = Clothing.objects.all()
-    permission_classes = [is_owner]
+    # permission_classes = [is_owner]
 
     def get_queryset(self):
         """
@@ -55,7 +55,6 @@ class UserClothingList(generics.ListCreateAPIView):
         # print("user is :", self.request.user)
         # user = self.request.user
         user = self.request.data["owner"]
-        print(user, "new user")
         return Clothing.objects.filter(owner=user)
 
     def perform_create(self, serializer):
