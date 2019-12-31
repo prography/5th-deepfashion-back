@@ -11,6 +11,8 @@ rdssecret.txt
 aws.txt
 .ssh/
 settings.ini
+certificate/
+
 
 # Editor
 .vscode/
