@@ -8,7 +8,7 @@ from clothes import views
 
 
 urlpatterns = [
-    path('upload/', views.ImageUploadView.as_view()),
+    # path('upload/', views.ImageUploadView.as_view()),
     path('admin/', views.AdminClothingList.as_view()),
     path('<int:pk>/', views.ClothingDetail.as_view()),
     path('codilist/', views.CodiListList.as_view()),

@@ -16,21 +16,21 @@ def index(request):
     return HttpResponse(msg, content_type='text/plain')
 
 
-class ImageUploadView(APIView):
-    parser_class = (FileUploadParser,)
+# class ImageUploadView(APIView):
+#     parser_class = (FileUploadParser,)
 
-    def post(self, request, *args, **kwargs):
+#     def post(self, request, *args, **kwargs):
 
-        image_serializer = ImageSerializer(data=request.data)
+#         image_serializer = ImageSerializer(data=request.data)
 
-        if image_serializer.is_valid() and request.user == Clothing.objects.get(pk=request.data["clothing"]).owner:
-            image_serializer.save()
-            return Response(image_serializer.data, status=status.HTTP_201_CREATED)
-        else:
-            print("error, image_serializer is not valid", image_serializer)
-            print("request user id", request.user,
-                  "clothing owner", request.data["clothing"])
-            return Response(image_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#         if image_serializer.is_valid() and request.user == Clothing.objects.get(pk=request.data["clothing"]).owner:
+#             image_serializer.save()
+#             return Response(image_serializer.data, status=status.HTTP_201_CREATED)
+#         else:
+#             print("error, image_serializer is not valid", image_serializer)
+#             print("request user id", request.user,
+#                   "clothing owner", request.data["clothing"])
+#             return Response(image_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # only for admin, testin purposes
@@ -55,7 +55,7 @@ class UserClothingList(generics.ListCreateAPIView):
         # print("user is :", self.request.user)
         # user = self.request.user
         user = self.request.user
-        print(user, "is the current user")
+        # print(user, "is the current user")
         return Clothing.objects.filter(owner=user)
 
     def perform_create(self, serializer):
