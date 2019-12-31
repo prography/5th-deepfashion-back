@@ -54,7 +54,8 @@ class UserClothingList(generics.ListCreateAPIView):
         """
         # print("user is :", self.request.user)
         # user = self.request.user
-        user = self.request.data["owner"]
+        user = self.request.user
+        print(user, "is the current user")
         return Clothing.objects.filter(owner=user)
 
     def perform_create(self, serializer):
