@@ -25,7 +25,10 @@ class ClothingSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         clothing_image = self.context.get("view").request.FILES
         instance = self.Meta.model.objects.create(**validated_data)
-        instance.img = clothing_image['img']
+        try:
+            instance.img = clothing_image['img']
+        except:
+            pass
         return instance
 
     # def to_representation(self, instance):
