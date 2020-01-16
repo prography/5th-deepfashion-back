@@ -17,7 +17,7 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = ['username', 'gender', 'styles', 'password']
 
     def create(self, validated_data):
-        print(validated_data)
+        # print(validated_data)
         styles =validated_data.pop('styles')
         # print(styles)
         instance = self.Meta.model.objects.create_user(**validated_data)
