@@ -17,10 +17,12 @@ https://docs.aws.amazon.com/code-samples/latest/catalog/python-s3-generate_presi
 -> look into endpoint (https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-s3.html)
 -> specifying bucket policy (https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html#example-bucket-policies-use-case-2)
 
-
+- clothing edit still requires owner as a field
 - check for ownership for when deleting, updating, getting list of users
 - automatically set "owner" filed for when uploading clothing from token, instead of accepting owner as a field
 - restict get clothing access to owners (get owner not from owner field, but from token)
+
+- add python-decouple to requirements.txt
 
 
 
