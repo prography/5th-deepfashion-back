@@ -5,15 +5,8 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-<<<<<<< HEAD
+
     "python.pythonPath": "eb-virt\\Scripts\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": false
-=======
-    "python.pythonPath": "/Users/macrent/opt/anaconda3/bin/python",
-    "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.enabled": true
->>>>>>> 15b6a27a8ec469a8b8d4233248c28789e2fd9417
-}
