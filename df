@@ -1,0 +1,447 @@
+[33mcommit f558e50e97c196379eca467d8459b5ca3b80e079[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Thu Jan 16 22:48:14 2020 +0900
+
+    fixed vs code settings
+
+[33mcommit e510a873efe754ca6a3e78717ab787f77994c04a[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Thu Jan 16 22:46:51 2020 +0900
+
+    vscode settings
+
+[33mcommit 3090ef5c1c08359fd149b8d0c1735bfd0d5cf3af[m
+Merge: 418e5022 15b6a27a
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Thu Jan 16 22:42:22 2020 +0900
+
+    test
+
+[33mcommit 418e5022fdfac219b205f8c9fb9e030476cb755b[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Thu Jan 16 22:09:33 2020 +0900
+
+    fixed user put issue, restricted user viewset actions on their own data after authentication
+
+[33mcommit 15b6a27a8ec469a8b8d4233248c28789e2fd9417[m
+Author: dongjoo <macrent@MacRentui-MacBook-Pro.local>
+Date:   Thu Jan 2 20:08:50 2020 +0900
+
+    changed todo.txt
+
+[33mcommit 08408a12c6c2fa05c59bee72f80d0681ae8bc9ba[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Jan 1 13:39:31 2020 +0900
+
+    changed index view to be in deepfashion and not clothes
+
+[33mcommit e6a18eb654cd57c79ec12ca8dc48315a4210ba57[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 23:41:44 2019 +0900
+
+    try catch for null image
+
+[33mcommit cb9329cbf48e3cd04b2e87cbfa860d8a88ff333b[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 21:04:34 2019 +0900
+
+    finally fixed header token issue, verified codilist, clothing get/post
+
+[33mcommit be2ee52567b2b0c743748dc92f8bc7c1a2e54c98[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 20:28:26 2019 +0900
+
+    header debug
+
+[33mcommit 07f779329a276492ce5b4341b11f2791a011c835[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 19:54:49 2019 +0900
+
+    changed eb config wsgi, header token bug
+
+[33mcommit 895b9bec3a59a48d8e5cb9132bd50e61a4917dba[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 01:56:41 2019 +0900
+
+    debug clothing upload user certify
+
+[33mcommit eaa55c48fa8087a1866319321e46d0fb30d82237[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 01:34:17 2019 +0900
+
+    bad fix for clothing get
+
+[33mcommit 1831af76d07e4ca27f951c1779d21cf0e5939f40[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Tue Dec 31 00:12:13 2019 +0900
+
+    added stuff of requirements.txt
+
+[33mcommit 4d6ce4f0086868cfdd9b86ff85b56c3512f823ac[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Mon Dec 30 23:11:00 2019 +0900
+
+    user clothing get bug
+
+[33mcommit 6388fc8db589dea20bf11a9898f5f08cac75d5ee[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Mon Dec 30 00:12:55 2019 +0900
+
+    file model for debugging
+
+[33mcommit 848076d93599ea1be0817b1a73f25e059ceca087[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Mon Dec 30 00:08:10 2019 +0900
+
+    url issue fixed
+
+[33mcommit 5b06b40247525cd36a452d6b1fd2added8ea8c91[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 23:52:35 2019 +0900
+
+    minor testing stuff/bug cleanup
+
+[33mcommit 0a8c146ff5e7c5b154a7a067716dca17d07a1942[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 23:48:16 2019 +0900
+
+    fixed clothing image upload bug finally
+
+[33mcommit 4c85ba9d98108401863f0d43c1c013338dfce0c6[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 23:41:17 2019 +0900
+
+    added boto3 to requirements
+
+[33mcommit 9669fa488be1e0435899f1c39ebab5190f7f3ce0[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 23:32:51 2019 +0900
+
+    removed awscli from requriements
+
+[33mcommit 35a34b3e23d13bd2a9e133493e7d8d8a3220e3f3[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 23:17:11 2019 +0900
+
+    debug image upload
+
+[33mcommit 177d7238d17fd5ed7362b6cbd73062089d34eea0[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 13:42:21 2019 +0900
+
+    user delete debug 2
+
+[33mcommit 5a7c957425c1ebb59de53642a3a8cedb67baf5f4[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 29 13:16:03 2019 +0900
+
+    user delete debug
+
+[33mcommit d8c8d99888b443b402601800509f01f3de7c3dae[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 02:11:28 2019 +0900
+
+    fix allowed hosts
+
+[33mcommit b90d4a4637e69f3e5490ac014da6af2c69e21f94[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 01:47:07 2019 +0900
+
+    successfully uploaded image to s3 in local
+
+[33mcommit 30a599787d46face629ca0c30de9fea0f4abe5ca[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 01:39:41 2019 +0900
+
+    added image serialzer debug message, added media storage config
+
+[33mcommit cb80fa389707efe4003f47a4c21bac7c4282d810[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 01:29:28 2019 +0900
+
+    storage debug with settings changed
+
+[33mcommit 4c76a00e9417fbb672fc952f2541ae149dca2919[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 01:19:45 2019 +0900
+
+    retry storages with requiremetns order cahnge2
+
+[33mcommit 1a54bbdc24a0fba675882e0950955abe94ebadb9[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 01:19:05 2019 +0900
+
+    retry storages with requiremetns order cahnge
+
+[33mcommit 8a6148e7c4cb676b217e2c6115ca4038333c37d3[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 00:33:48 2019 +0900
+
+    boto3, django-storages but
+
+[33mcommit 40d5c8337222424ffba4ee6ac35bb0dd52b09236[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 28 00:14:31 2019 +0900
+
+    debug boto
+
+[33mcommit e42a41610e1a000907b42e1a563fc93b05669931[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 27 23:11:41 2019 +0900
+
+    debug s3
+
+[33mcommit 7d73b1666b7785682e46b97aba779aee5c40be01[m
+Merge: 59da5be0 31e24ce5
+Author: dongjoo <macrent@MacRentui-MacBook-Pro.local>
+Date:   Fri Dec 27 21:48:06 2019 +0900
+
+    Merge branch 'master' of https://github.com/prography/5th-deepfashion-back
+
+[33mcommit 59da5be052f43c0b85ea6bf9a94190d939b12b14[m
+Author: dongjoo <macrent@MacRentui-MacBook-Pro.local>
+Date:   Fri Dec 27 21:47:49 2019 +0900
+
+    updated git ignore
+
+[33mcommit 31e24ce5a4948717c9fcda7f0fb1f83543c364b4[m
+Author: Lee Dong Joo <david.adrianmonk.lee@gmail.com>
+Date:   Fri Dec 27 21:46:30 2019 +0900
+
+    Delete rdssecret.txt
+
+[33mcommit 0136c04bc3e03534dd3b53228a55373f3bf7d8f9[m
+Author: dongjoo <macrent@MacRentui-MacBook-Pro.local>
+Date:   Fri Dec 27 21:34:44 2019 +0900
+
+    s
+
+[33mcommit 7f9c4c16b0266d263e54efa1a4f425c5add9a1d9[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Dec 25 14:38:28 2019 +0900
+
+    fixed codilist to check for clothing ownership when posting
+
+[33mcommit 946f2224c7983bad30a9fd03735cedea353ca444[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Mon Dec 23 22:39:39 2019 +0900
+
+    added codilist edit, delete, have to fix issue with clothing owner identification before adding it into codilist
+
+[33mcommit 5e07452227f9cd5aafa54d2b785b8397c6936952[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Mon Dec 23 21:17:33 2019 +0900
+
+    added class meta to short weather prediction serializer to fix swagger
+
+[33mcommit 13afe054574971a7503a68da315195ffe8cb9603[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 22 22:51:14 2019 +0900
+
+    fixed time issue in weather scrape, added user edit, delete functionalities as well as restric get list to super user
+
+[33mcommit b156cf070dd9f07914a563c8d99531c882053905[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 22 01:02:33 2019 +0900
+
+    redeploy
+
+[33mcommit b7364b711ea9fc6641086c6bb9d7d0a2c7e824fc[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 22 00:42:42 2019 +0900
+
+    added current weather api, need to add short term prediction weather, and also probably improve the current weather stuff
+
+[33mcommit 47c9cbad578c8f28194be3daf9039d1808d8c456[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 20:12:14 2019 +0900
+
+    i think this fixes the cron thing
+
+[33mcommit 34b7c02a9c7a88d46456aad8ab6fe350e03e636d[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 20:01:45 2019 +0900
+
+    debug cron
+
+[33mcommit c0721af30d9371ae2163b99b136dad44f121f6e8[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 19:25:15 2019 +0900
+
+    cahnged test.py
+
+[33mcommit dfefdab84d6c69b1e03ad20ec4def1daa0fefa7a[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 18:14:56 2019 +0900
+
+    debuggin cron
+
+[33mcommit 93d05425e28c2ad288ba0f9dd2773fb908c88ff1[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 17:43:00 2019 +0900
+
+    changed cron config file for debuggin
+
+[33mcommit 33cfb3077c3f9b1c2fbf73d179ae36ea9dc2bd21[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Fri Dec 20 17:28:30 2019 +0900
+
+    added index page httpresponse to clothing app and testing cron script
+
+[33mcommit 1b6469c789df14b16e2697f2c2dd7c9278d4c2ed[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Thu Dec 19 19:22:08 2019 +0900
+
+    added codilist post/get
+
+[33mcommit d0aec2d1495d532ad364540d95294c965b3e647c[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Dec 18 23:26:05 2019 +0900
+
+    added color type to admin
+
+[33mcommit 14924b80a10a123b2eeeb83405a80b69421faab8[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Dec 18 22:56:34 2019 +0900
+
+    added color as model
+
+[33mcommit 40c8934d2f531ea3852cf78cbfc8e457712e0a12[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Dec 18 19:48:00 2019 +0900
+
+    added pk response value to clothing upload and user login
+
+[33mcommit 66c085c6d16f67f85462f43895a836b7f32a913c[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Dec 18 01:56:59 2019 +0900
+
+    container commands
+
+[33mcommit c0e1b6f2dbbdcba35bad250d57f8fd4d35eaf954[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 15 14:42:12 2019 +0900
+
+    test
+
+[33mcommit 6a056d3930566f598f002608fa0477730908928b[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 15 03:04:41 2019 +0900
+
+    requiremetn django-extension
+
+[33mcommit 27064fcfd042d9324a165284a815df47f4dd6bc5[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 15 00:33:15 2019 +0900
+
+    requirements pypiwin32
+
+[33mcommit 85c9b9a56ade639d706a1d191e6086ce485089fe[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 15 00:12:35 2019 +0900
+
+    removed pywin32==227 from requirements.txt
+
+[33mcommit ac3b213a4de7ced7cb34336171d8fa0fb7c109c7[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 14 21:03:02 2019 +0900
+
+    fixed requirments
+
+[33mcommit 8c7accceb59d2a3fa8b16db57bdb3908e4b8f08a[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 14 20:19:09 2019 +0900
+
+    please work
+
+[33mcommit 12adaa4203754cd706ea89bd995cd3cbe5f56c74[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 14 19:11:34 2019 +0900
+
+    added eb package
+
+[33mcommit f3219f882a9709852855aca2e8474670ac18177a[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sat Dec 14 13:43:53 2019 +0900
+
+    adsdf
+
+[33mcommit 7f56483f3ac702e5a75339c97d1d583194c7ef72[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 8 15:10:52 2019 +0900
+
+    removed eb-virt and changed gitignorer
+
+[33mcommit fd04256eaf5501763876107ab0250b34345c05ed[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 8 15:10:04 2019 +0900
+
+    changed gitigore
+
+[33mcommit 2387e08481c29b47fe3be2acb089aef4e5c81037[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Dec 8 14:35:14 2019 +0900
+
+    work please
+
+[33mcommit 3b61f29c0ede8883bdaffef6f0432d5236ee9bd3[m
+Merge: 3f52cefc dff241d4
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 17 17:45:10 2019 +0900
+
+    Merge branch 'master' of https://github.com/prography/5th-deepfashion-back
+
+[33mcommit 3f52cefc2d2252f66929be855b5003542c90d053[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 17 17:44:46 2019 +0900
+
+    git ignore stuff 2
+
+[33mcommit dff241d4b11676bec8a1438dfea3fd7b32b1149c[m
+Author: Lee Dong Joo <david.adrianmonk.lee@gmail.com>
+Date:   Sun Nov 17 17:44:31 2019 +0900
+
+    Delete secret.txt
+
+[33mcommit cd8277c7bdc090381aceec167d3829a783539b06[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 17 17:42:35 2019 +0900
+
+    gitignore added
+
+[33mcommit 28246ff93631834b5b39afc4cdd7af8e302c4001[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 17 17:29:02 2019 +0900
+
+    added stable-req.txt
+
+[33mcommit dea251ba6d5331eac0a173243a7eacb251e430b9[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 17 17:22:33 2019 +0900
+
+    added image upload, image post, get stuff as well as swagger doc
+
+[33mcommit c099af732766478f208c91a9c1b87abc4a31eeab[m
+Merge: 937b57d6 e16014d1
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Nov 13 14:57:41 2019 +0900
+
+    Merge branch 'master' of https://github.com/prography/5th-deepfashion-back
+
+[33mcommit 937b57d67ae3ea62931210bdd1df7d22899291ce[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Wed Nov 13 14:53:00 2019 +0900
+
+    sign up clothing multiple selection improvement
+
+[33mcommit e16014d14a419242e800335c636aa05e3f8e7371[m
+Author: Lee Dong Joo <david.adrianmonk.lee@gmail.com>
+Date:   Sun Nov 3 19:38:20 2019 +0900
+
+    Update settings.py
+
+[33mcommit 2de51b8981868718324d9c3a762cddb56f149f29[m
+Author: Dong Joo Lee <leedongjoo96@naver.com>
+Date:   Sun Nov 3 19:37:07 2019 +0900
+
+    signup login basic features
