@@ -5,9 +5,13 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
+<<<<<<< HEAD
     "python.pythonPath": "eb-virt\\Scripts\\python.exe",
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": false
 
+=======
+    "python.pythonPath": "eb-virt\\Scripts\\python.exe"
+>>>>>>> parent of 08408a12... changed index view to be in deepfashion and not clothes
 }
