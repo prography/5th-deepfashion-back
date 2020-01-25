@@ -5,6 +5,8 @@ from django.db import models
 # stores eight predictions of three hour intervals
 class GlobalPredict(models.Model):
     # data that doesn't change
+    longitude = models.DecimalField(max_digits=5, decimal_places=2, null=True)
+    latitude = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     city_country = models.TextField()
     city_name = models.TextField()
     city_id = models.DecimalField(max_digits=5, decimal_places=2, null=True)
@@ -100,9 +102,6 @@ class GlobalPredict(models.Model):
     cloud_five = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     predict_time_five = models.DateTimeField()
 
-
-
-
     # weather
     weather_id_six = models.IntegerField()
     weather_main_six = models.TextField()
@@ -119,9 +118,6 @@ class GlobalPredict(models.Model):
     # clouds
     cloud_six = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     predict_time_six = models.DateTimeField()
-
-
-
 
     # weather
     weather_id_seven = models.IntegerField()
@@ -140,8 +136,6 @@ class GlobalPredict(models.Model):
     cloud_seven = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     predict_time_seven = models.DateTimeField()
 
-
-
     # weather
     weather_id_eight = models.IntegerField()
     weather_main_eight = models.TextField()
@@ -158,8 +152,6 @@ class GlobalPredict(models.Model):
     # clouds
     cloud_eight = models.DecimalField(max_digits=5, decimal_places=2, null=True)
     predict_time_eight = models.DateTimeField()
-
-
 
 
 
