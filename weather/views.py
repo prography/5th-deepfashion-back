@@ -28,6 +28,7 @@ def find_closest_city(lat, long, distance=20, model_type='current'):
 
 
 
+
 def get_global_current(lat, long):
 
 
