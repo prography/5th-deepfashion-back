@@ -22,7 +22,7 @@ def find_closest_city(lat, long, distance=20, model_type='current'):
         queryset = GlobalPredict.objects.all()
     
     found_closest = False # closest city within certain limit exists in db
-    min_distance = 
+    # min_distance = 
     # for city in queryset:
 
 
