@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from .models import *
 
+admin.site.register(DomesticCurrent)
+admin.site.register(GlobalCurrent)
+admin.site.register(GlobalPredict)
 
-
-admin.site.register(CurrentWeather)
-admin.site.register(ShortPredictionWeather)

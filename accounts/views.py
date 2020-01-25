@@ -28,9 +28,6 @@ class AccountViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
-
-        # print(instance.password, 'original')
-
         # hash plaintext password into hased with set_password
         instance.set_password(request.data['password'])
         # set request password as hashed password

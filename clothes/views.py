@@ -11,26 +11,6 @@ from django.http import HttpResponse
 from rest_framework import viewsets, status
 from rest_framework.parsers import MultiPartParser, FormParser
 
-def index(request):
-    msg = "deepfashion"
-    return HttpResponse(msg, content_type='text/plain')
-
-
-# class ImageUploadView(APIView):
-#     parser_class = (FileUploadParser,)
-
-#     def post(self, request, *args, **kwargs):
-
-#         image_serializer = ImageSerializer(data=request.data)
-
-#         if image_serializer.is_valid() and request.user == Clothing.objects.get(pk=request.data["clothing"]).owner:
-#             image_serializer.save()
-#             return Response(image_serializer.data, status=status.HTTP_201_CREATED)
-#         else:
-#             print("error, image_serializer is not valid", image_serializer)
-#             print("request user id", request.user,
-#                   "clothing owner", request.data["clothing"])
-#             return Response(image_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # only for admin, testin purposes

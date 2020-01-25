@@ -2,8 +2,8 @@ astroid==2.0.4
 autopep8==1.4.4
 awsebcli==3.16.0
 beautifulsoup4==4.8.1
-botocore==1.13.39
 boto3==1.10.45
+botocore==1.13.39
 bs4==0.0.1
 cement==2.8.2
 certifi==2019.9.11
@@ -18,6 +18,8 @@ djangorestframework==3.10.3
 docutils==0.15.2
 drf-yasg==1.17.0
 future==0.16.0
+geographiclib==1.50
+geopy==1.20.0
 httpie==1.0.3
 idna==2.7
 inflection==0.3.1
@@ -40,9 +42,11 @@ pycodestyle==2.5.0
 Pygments==2.4.2
 pylint==2.1.1
 pyparsing==2.4.5
+pypiwin32==223
 python-dateutil==2.8.0
 python-decouple==3.3
 pytz==2019.3
+pywin32==227
 PyYAML==3.13
 requests==2.20.1
 rope==0.11.0
@@ -53,6 +57,7 @@ s3transfer==0.2.1
 semantic-version==2.5.0
 simplejson==3.16.0
 six==1.11.0
+soupsieve==1.9.5
 sqlparse==0.3.0
 termcolor==1.1.0
 typed-ast==1.4.0
@@ -61,5 +66,3 @@ urllib3==1.24.3
 wcwidth==0.1.7
 wincertstore==0.2
 wrapt==1.10.11
-soupsieve==1.9.5
-wheel==0.33.6

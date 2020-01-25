@@ -5,14 +5,63 @@ from .serializers import *
 from .models import *
 from django.http import HttpResponse
 import datetime
+from geopy.distance import distance as geo_distance
+import requests
+import json
+
+
+def find_closest_city(lat, long, distance=20, model_type='current'):
+    ''' 
+    find a the city data for "type" (current or prediction) that's 
+    "distance" kilometers away from
+    existing city in db if it exists
+    '''
+    if model_type == 'current':
+        queryset = GlobalCurrent.objects.all()
+    else:
+        queryset = GlobalPredict.objects.all()
+    
+    found_closest = False # closest city within certain limit exists in db
+    # for city in queryset:
+
+
+
+
+
+def get_global_current(lat, long):
+
+
+
+
+
+    pass
+
+def get_global_predict(lat, long):
+    pass
+
+class GlobalCurrentView(generics.RetrieveAPIView):
+
+    pass
+
+class GlobalPredictView(generics.RetrieveAPIView):
+    pass
+
+
+
+
+
+
+
+
+
 
 
 # function to scrape current weather data if 1 hours has passed since last update_time 
-def current_initial_scrape(delay=1):
+def domestic_initial_scrape(delay=1):
     # 한국 표준시간
     KST = datetime.timezone(datetime.timedelta(hours=9))
     # check whether scrapped in the last 12 hours
-    sample_city = CurrentWeather.objects.get(id=1)
+    sample_city = DomesticCurrent.objects.get(id=1)
     curr_time = datetime.datetime.now(tz=KST)
     delta = datetime.timedelta(hours=delay)
     # just return without updating if less than 1 hour has passed since last update
@@ -44,20 +93,18 @@ def current_initial_scrape(delay=1):
 
 
 
-
-
-class CurrentWeatherView(generics.ListAPIView):
-    queryset = CurrentWeather.objects.all()
-    serializer_class = CurrentWeatherSerializer
+class DomesticCurrentView(generics.ListAPIView):
+    queryset = DomesticCurrent.objects.all()
+    serializer_class = DomesticCurrentSerializer
 
     def list(self, request):
-        current_initial_scrape()
+        domestic_initial_scrape()
         # Note the use of `get_queryset()` instead of `self.queryset`
         queryset = self.get_queryset()
-        serializer = CurrentWeatherSerializer(queryset, many=True)
+        serializer = DomesticCurrentSerializer(queryset, many=True)
         return Response(serializer.data)
 
 
-class ShortPredictionWeatherView(generics.ListAPIView):
-    queryset = ShortPredictionWeather.objects.all()
-    serializer_class = ShortPredictionWeatherSerializer
+# class ShortPredictionWeatherView(generics.ListAPIView):
+#     queryset = ShortPredictionWeather.objects.all()
+#     serializer_class = ShortPredictionWeatherSerializer

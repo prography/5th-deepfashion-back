@@ -1,25 +1,29 @@
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
+# from rest_framework.response import Response
+# from rest_framework import authentication, permissions
 from .models import *
 from rest_framework import serializers
 
-# 크롤링 libs
-import requests
-import urllib
-from bs4 import BeautifulSoup
-import pandas as pd
-import json
+# import requests
+# import urllib
+# from bs4 import BeautifulSoup
+# import pandas as pd
+# import json
 
 
-class CurrentWeatherSerializer(serializers.ModelSerializer):
+class DomesticCurrentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CurrentWeather
+        model = DomesticCurrent
         fields = "__all__"
 
 
 
-class ShortPredictionWeatherSerializer(serializers.ModelSerializer):
+class GlobalCurrentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = CurrentWeather
+        model = GlobalCurrent
         fields = "__all__"
-    pass
+
+
+class GlobalPredictSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GlobalPredict
+        fields = "__all__"
