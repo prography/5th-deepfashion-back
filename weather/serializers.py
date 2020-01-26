@@ -17,9 +17,9 @@ class DomesticCurrentSerializer(serializers.ModelSerializer):
 
 
 
-class GlobalCurrentSerializer(serializers.ModelSerializer):
+class InternationalCurrentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = GlobalCurrent
+        model = InternationalCurrent
         fields = "__all__"
 
 

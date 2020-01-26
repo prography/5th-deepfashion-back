@@ -6,10 +6,11 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from weather import views
 
 urlpatterns = [
+    path('global-current/', views.get_current_weather),
+    path('global-prediction/', views.get_predict_weather),
     path('domestic-current/', views.DomesticCurrentView.as_view()),
-    path('global-current/', views.GlobalCurrentView.as_view()),
-    path('global-prediction/', views.GlobalPredictView.as_view()),
-    path('current-weather/', views.DomesticCurrentView.as_view()), # for legacy
+    #### ============================= legacy
+    path('current-weather/', views.DomesticCurrentView.as_view()),
 ]
 
 

@@ -2,11 +2,9 @@
 
 delete post image model?
 
-short term weather tmax, tmin and other things
-http://www.weather.go.kr/weather/forecast/summary.jsp
-(the above link contains current temp, and tmax, tmin for the day,
-organized into reasonable number of regions)
-clothing recommendation - get clothing by certain quality
+right now the weather apis are updating things like city indexes that don't really need to change,
+maybe cut down on this to preserve number of database writes?
+
 
 
 
