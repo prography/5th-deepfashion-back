@@ -18,6 +18,8 @@ from django.urls import path, include
 from accounts import urls
 from clothes import urls
 from weather import urls
+from weatherapi import urls
+from testapp import urls
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
@@ -48,5 +50,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('clothing/', include('clothes.urls')),
     path('weather/', include('weather.urls')),
+    path('testapp/', include('testapp.urls')),
+    path('weatherapi/', include('weatherapi.urls')),
 
 ]

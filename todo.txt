@@ -5,7 +5,7 @@ delete post image model?
 right now the weather apis are updating things like city indexes that don't really need to change,
 maybe cut down on this to preserve number of database writes?
 
-
+delete weather, testapp apps, use weatherapi app as default from now on
 
 
 - restrict image access to only users who own the clothing
@@ -20,7 +20,6 @@ https://docs.aws.amazon.com/code-samples/latest/catalog/python-s3-generate_presi
 - automatically set "owner" filed for when uploading clothing from token, instead of accepting owner as a field
 - restict get clothing access to owners (get owner not from owner field, but from token)
 
-- add python-decouple to requirements.txt
 
 
 
