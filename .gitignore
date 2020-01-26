@@ -11,7 +11,7 @@ rdssecret.txt
 aws.txt
 .ssh/
 settings.ini
-certificate/
+/certificate/*
 
 
 # Editor
