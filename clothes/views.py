@@ -5,10 +5,8 @@ from rest_framework.views import APIView
 from rest_framework import status, viewsets, permissions, generics, permissions
 from .serializers import ImageSerializer, ClothingSerializer, CodiSerializer
 from .models import Clothing, CodiList
-from rest_framework import status
 from .permissions import is_owner
 from django.http import HttpResponse
-from rest_framework import viewsets, status
 from rest_framework.parsers import MultiPartParser, FormParser
 
 

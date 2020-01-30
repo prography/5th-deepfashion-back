@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from accounts import urls
 from clothes import urls
-from weather import urls
 from weatherapi import urls
-from testapp import urls
+# from testapp import urls
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from .views import index
+
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -49,8 +49,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('clothing/', include('clothes.urls')),
-    path('weather/', include('weather.urls')),
-    path('testapp/', include('testapp.urls')),
+    path('weather/', include('weatherapi.urls')),
     path('weatherapi/', include('weatherapi.urls')),
 
 ]

@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'clothes',
-    'weather',
-    'testapp',
     'weatherapi',
     'rest_framework.authtoken',
     'drf_yasg',

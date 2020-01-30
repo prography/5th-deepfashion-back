@@ -165,13 +165,16 @@ def domestic_initial_scrape(delay=1):
     # 한국 표준시간
     KST = datetime.timezone(datetime.timedelta(hours=9))
     # check whether scrapped in the last 12 hours
-    sample_city = DomesticCurrent.objects.get(id=1)
     curr_time = datetime.datetime.now(tz=KST)
     delta = datetime.timedelta(hours=delay)
-    # just return without updating if less than 1 hour has passed since last update
-    if curr_time - sample_city.update_time < delta:
-        return
-
+    try:
+        sample_city = DomesticCurrent.objects.get(id=1)
+        # just return without updating if less than 1 hour has passed since last update
+        if curr_time - sample_city.update_time < delta:
+            return
+    except:
+        print("probably haven't done inital scrape yet")
+        pass
     # scraping and update part
     curr_wea = requests.get(
         'http://www.weather.go.kr/weather/observation/currentweather.jsp')
